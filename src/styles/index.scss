@@ -1,0 +1,131 @@
+$bg-color: #000000;
+$body-color: #ffffff;
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+body {
+  color: $body-color;
+  background-color: $bg-color;
+  font-family: 'Ubuntu', serif;
+}
+
+.element {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 1s ease-out;
+
+  .textWrap {
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    transition-property: opacity;
+    transition-timing-function: ease-in;
+    transition-duration: 1.4s;
+    transition-delay: 1.6s;
+
+    .title {
+      text-shadow: 0 1px 0 black;
+      transition-property: opacity;
+      transition-duration: 0.7s;
+      transition-timing-function: ease-out;
+
+      font-weight: 700;
+      overflow: hidden;
+      margin: 20px 20px;
+    }
+
+    .text {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+
+      font-weight: 400;
+      overflow: hidden;
+      margin: 0 20px 20px;
+    }
+  }
+
+  .instaWrap {
+    //max-height: 1080px;
+    position: fixed;
+    left: 50%;
+    transform: translate3d(-50%, 30%, 0) scale3d(1.5, 1.5, 0);
+  }
+
+  .gradient {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  }
+
+  .image-wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    .image-wrap img {
+      position: absolute;
+    }
+
+    .ken-burns {
+      animation: move 40s ease;
+      -webkit-animation: move 40s ease;
+      -o-animation: move 40s ease;
+      -moz-animation: move 40s ease;
+    }
+
+    img {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.prep {
+  transform: translate3d(100%, 0, 0);
+}
+
+.invisible {
+  opacity: 0.0;
+}
+
+.slide-out {
+
+  .text {
+    opacity: 0;
+  }
+
+  .title {
+    opacity: 0;
+  }
+
+  img {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    transform-origin: bottom left;;
+    transform: scale3d(1.0, 1.0, 1.0);
+  }
+  5% {
+    transform: scale3d(1.0, 1.0, 1.0);
+  }
+  100% {
+    transform: scale3d(1.2, 1.2, 1.0);
+  }
+}
+
+
